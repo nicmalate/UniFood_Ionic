@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <p align="center" class="h1 text-center mb-4">Uni<b style="color: red">Food</b></p>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="col-12" align="center" margin-top="10px">
+    <img className="card-img-top" src="https://image.ibb.co/kUDC9d/CIAO_copy.png" style="width: 27%; height: 27%; max-width: 20%; min-width: 35%" align="center" alt="Card image cap">
+  </div>
+
+  <div class="ion-padding">
+    <ion-item>
+      <ion-label position="stacked">Username</ion-label>
+      <ion-input id = "username" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input id = "password" type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-button align="center" color="danger" slot="end" (click)="getLogin()">ACCEDI</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
