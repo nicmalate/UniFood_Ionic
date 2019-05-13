@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {LoginService} from '../loginservice/login.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,11 +11,12 @@ import {LoginService} from '../loginservice/login.service';
 export class LoginPage {
   username: string;
   password: string;
-  constructor(private loginService: LoginService) {
-  }
+  constructor(private loginService: LoginService, private router: Router) {
+    }
   getLogin() {
     this.loginService.getLogin(this.username, this.password).then(data => {
       console.log(data);
+      this.router.navigateByUrl('/prodotti');
     }).catch(err => {
       console.error(err);
     });
