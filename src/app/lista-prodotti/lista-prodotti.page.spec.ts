@@ -25,3 +25,4 @@ describe('ListaProdottiPage', () => {
     expect(component).toBeTruthy();
   });
 });
+
