@@ -9,7 +9,6 @@ import {AppComponent} from '../app.component';
 })
 export class ListaProdottiPage {
   constructor(private listaProdottiService: ListaProdottiService, private appComponent: AppComponent) {
-
     this.getProdotti();
   }
 
