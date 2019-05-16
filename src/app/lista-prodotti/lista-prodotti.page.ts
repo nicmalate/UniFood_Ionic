@@ -8,7 +8,7 @@ import {AppComponent} from '../app.component';
   styleUrls: ['./lista-prodotti.page.scss'],
 })
 export class ListaProdottiPage {
-  constructor(private listaProdottiService: ListaProdottiService, private appComponent: AppComponent) {
+  constructor(private listaProdottiService: ListaProdottiService) {
     this.getProdotti();
   }
 

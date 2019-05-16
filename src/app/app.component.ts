@@ -13,8 +13,6 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 @Injectable()
 export class AppComponent {
 
-  public data:any=[];
-
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -28,19 +26,7 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-
     });
   }
 
-  saveInSession(key, val): void {
-    console.log('recieved= key: ' + key + ' ' + 'value: ' + val);
-    this.session_storage.set(key, val);
-    this.data[key]= this.session_storage.get(key);
-  }
-
-  getFromSession(key): void{
-    console.log('recieved = key' + key);
-    this.data[key] = this.session_storage.get(key);
-    console.log(this.data);
-  }
 }
