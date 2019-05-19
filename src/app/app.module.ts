@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {StorageServiceModule} from 'angular-webstorage-service';
+import {CookieService} from 'ngx-cookie-service';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +20,7 @@ import {StorageServiceModule} from 'angular-webstorage-service';
   providers: [
     StatusBar,
     SplashScreen,
+    CookieService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
