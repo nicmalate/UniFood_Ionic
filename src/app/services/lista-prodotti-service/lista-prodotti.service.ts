@@ -7,7 +7,7 @@ import {reject} from 'q';
 })
 export class ListaProdottiService {
 
-  baseUrl = 'http://192.168.64.2/UniFood/public/prodotti';
+  baseUrl = 'http://localhost/UniFood/public/prodotti';
   cookieValue: string;
 
   constructor(private http: HttpClient) { }
