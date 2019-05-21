@@ -6,7 +6,7 @@ import {reject} from 'q';
   providedIn: 'root'
 })
 export class LoginService {
-  baseUrl = 'http://localhost/UniFood/public/login';
+  baseUrl = 'http://192.168.64.2/UniFood/public/login';
 
   constructor(private http: HttpClient) { }
 

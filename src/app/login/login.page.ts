@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {LoginService} from '../services/loginservice/login.service';
 import {Router} from '@angular/router';
 import {CookieService} from 'ngx-cookie-service';
+import {ListaProdottiService} from '../services/lista-prodotti-service/lista-prodotti.service';
 
 @Component({
   selector: 'demo-root',
@@ -13,7 +14,7 @@ export class LoginPage {
   username: string;
   password: string;
   cookieValue = 'UNKNOWN';
-  constructor(private loginService: LoginService, private router: Router, private cookieService: CookieService) {
+  constructor(private loginService: LoginService, private router: Router, private cookieService: CookieService, private prodottiService: ListaProdottiService) {
     }
 
   getLogin() {
@@ -23,6 +24,7 @@ export class LoginPage {
       this.cookieService.set('PHPSESSID', data['login']['id_session']);
       this.cookieValue = this.cookieService.get('PHPSESSID');
       console.log(this.cookieValue);
+      this.prodottiService.cookieValue = this.cookieValue;
       this.router.navigateByUrl('/prodotti', { skipLocationChange: true });
     }).catch(err => {
       console.error(err);
